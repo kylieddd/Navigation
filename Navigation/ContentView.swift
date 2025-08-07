@@ -12,22 +12,32 @@ struct ContentView: View {
         
         NavigationStack {
             VStack{
-                Text("This is the root view ")
-                NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
+                Text("Click me! ")
+                
+                NavigationLink(destination: Second_View_()) {
+                    Text("Click me!")
+                }//link1
+                
+                
+            Text("Open me! ")
+            //.fontWeight(.bold)
+            NavigationLink(destination:
+                            Text("Good Morning ☀️")
+                .fontWeight(.bold)) {
                     /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Label Content@*/Text("Navigate")/*@END_MENU_TOKEN@*/
                     
-                    
-                        
-                    }
-                }//vstack end
-                
-                
-            }
+                }//link2
+            }//vstack end
             
+            .navigationTitle("Home")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(true)
+            
+        }//navstack
+    }//body
+}//struct
                         
-                    }
-                
-            }
+
   
 #Preview {
     ContentView()
